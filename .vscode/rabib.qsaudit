@@ -1,0 +1,77 @@
+{
+  "clientRemote": "",
+  "gitRemote": "",
+  "gitSha": "",
+  "treeEntries": [
+    {
+      "label": "Is this necessary in the Altair spec?",
+      "id": "178879ba-1442-45ec-96a5-9a1523c98443",
+      "entryType": 2,
+      "author": "rabib",
+      "locations": [
+        {
+          "path": "crates/ibc/src/update.rs",
+          "startLine": 47,
+          "endLine": 47,
+          "label": "",
+          "description": ""
+        }
+      ],
+      "details": {
+        "status": "Unresolved",
+        "severity": "",
+        "description": "Is it allowed in the Altair spec to submit a \"finality update\", i.e. an update without the next sync committee fields, when the finalized header is from the next period? If so, it would appear that this check is unwarranted.",
+        "exploit": "",
+        "recommendation": ""
+      }
+    },
+    {
+      "label": "Some very old dependencies here",
+      "id": "de962191-0cd8-4ac5-91da-248a6216440b",
+      "entryType": 2,
+      "author": "rabib",
+      "locations": [
+        {
+          "path": "crates/ibc/Cargo.toml",
+          "startLine": 6,
+          "endLine": 6,
+          "label": "",
+          "description": ""
+        }
+      ],
+      "details": {
+        "status": "Unresolved",
+        "severity": "",
+        "description": "",
+        "exploit": "",
+        "recommendation": ""
+      }
+    },
+    {
+      "label": "Not declared `Option`",
+      "id": "853c82f4-2bc3-4d93-a8ed-2c3fdddd1822",
+      "entryType": 2,
+      "author": "rabib",
+      "locations": [
+        {
+          "path": "crates/ibc/src/types.rs",
+          "startLine": 30,
+          "endLine": 30,
+          "label": "",
+          "description": ""
+        }
+      ],
+      "details": {
+        "status": "Unresolved",
+        "severity": "",
+        "description": "I think the reason is because they are not interested in using attested headers to update their light client. Instead, they are solely interested in updating the finalized state. So \"optimistic\" updates are not allowed.",
+        "exploit": "",
+        "recommendation": ""
+      }
+    }
+  ],
+  "auditedFiles": [],
+  "partiallyAuditedFiles": [],
+  "resolvedEntries": [],
+  "version": "0.9.6"
+}
